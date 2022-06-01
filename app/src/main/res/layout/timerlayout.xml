@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/timePicker" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/datePicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Target Action"
+        android:id="@+id/textView5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TURN OFF"
+        android:id="@+id/deleteTimer"
+        android:layout_gravity="right"
+        android:onClick="deleteTimerClicked" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFF"
+        android:id="@+id/target"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onTargetClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Timer"
+        android:id="@+id/btOneTime"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onetimeTimer" />
+
+</LinearLayout>

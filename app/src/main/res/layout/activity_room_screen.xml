@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".com.example.janeeta.poweroptimizer.roomScreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/roomHeading"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:text="ROOMS: " />
+
+
+    <ListView
+        android:id="@+id/roomList"
+        android:textSize="23dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_height="72dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/roomHeading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/turnOnAuto"
+        android:smoothScrollbar="true">
+
+
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGOUT"
+        android:id="@+id/logoutButton"
+        android:textColorHighlight="#8d5f5f"
+        android:textSize="12dp"
+        android:textColor="#030303"
+        android:onClick="logoutClicked"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/summaryList"
+        android:layout_alignStart="@+id/summaryList"
+        android:background="#d6d7d7"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:id="@+id/settingsButton"
+        android:textColorHighlight="#8d5f5f"
+        android:textSize="12dp"
+        android:textColor="#030303"
+        android:onClick="settingsClicked"
+        android:layout_alignTop="@+id/logoutButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#d6d7d7"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TURN ON AUTOMATION    "
+        android:id="@+id/turnOnAuto"
+        android:textColorHighlight="#8d5f5f"
+        android:textSize="12dp"
+        android:textColor="#ffffff"
+        android:onClick="turnOnAutomationClicked"
+        android:background="#3b6a7b"
+        android:textStyle="bold"
+        android:layout_marginBottom="47dp"
+        android:layout_above="@+id/logoutButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/logoutButton"
+        android:layout_alignEnd="@+id/logoutButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TURN OFF AUTOMATION    "
+        android:id="@+id/turnOffAuto"
+        android:textColorHighlight="#8d5f5f"
+        android:textSize="12dp"
+        android:textColor="#ffffff"
+        android:onClick="turnOffAutomationClicked"
+        android:background="#3b6a7b"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/turnOnAuto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/settingsButton"
+        android:layout_alignStart="@+id/settingsButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkSummaryButton"
+        android:src="@drawable/details1"
+        android:background="#16485f"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="checkSummaryForAllDevicesClicked"/>
+
+</RelativeLayout>

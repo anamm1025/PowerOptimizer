@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.janeeta.poweroptimizer">
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- permission required to use Alarm Manager -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+
+    <permission android:name="com.example.janeeta.poweroptimizer.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.janeeta.poweroptimizer.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Power Optimization App"
+        android:supportsRtl="true"
+        android:theme="@style/MyDatePicker">
+        <activity android:name=".LoginScreen" />
+        <activity android:name=".WelcomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".passwordScreen" />
+        <activity android:name=".Settings" />
+        <activity android:name=".TurnONScreen" >
+            </activity>
+        <activity android:name=".CheckSummary" />
+        <activity android:name=".roomScreen" />
+        <activity android:name=".selectedRoomScreen" />
+        <activity android:name=".deviceInfoScreen" />
+        <activity android:name=".removedDeviceScreen" />
+
+        <activity
+            android:name=".timernew"
+            android:label="@string/title_activity_timer" />
+
+        <!-- Register the Alarm Receiver -->
+        <receiver android:name=".AlarmReciever" />
+
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.janeeta.poweroptimizer" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GcmMessageHandler" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            />
+    </application>
+
+</manifest>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Power Optimizer</string>
+    <string name="btCancel">Cancel Repeating Timer</string>
+    <string name="btStart">Start Repeating Timer</string>
+    <string name="btOneTime">One-time Timer</string>
+    <string name="title_activity_timer">Timer</string>
+</resources>
